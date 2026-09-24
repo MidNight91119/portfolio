@@ -23,6 +23,17 @@ export const about = [
 
 export const experience = [
   {
+    company: 'Independent',
+    role: 'Backend Engineer',
+    period: '2024 – Present',
+    place: 'Nagpur (remote)',
+    context: 'Self-directed projects and the Super30 backend cohort',
+    points: [
+      'Building Go backends full time: the AI support agent, perpetual-futures exchange and SimpleBank below, plus a freelance marketplace (Go + React, one-transaction contract creation) and a task manager, both deployed live.',
+    ],
+    stack: ['Go', 'PostgreSQL', 'Redis', 'gRPC', 'React', 'Docker', 'AWS'],
+  },
+  {
     company: 'Radisys',
     role: 'Software Engineer, Backend',
     period: 'Jan 2023 – Feb 2024',

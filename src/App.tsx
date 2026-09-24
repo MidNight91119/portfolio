@@ -176,7 +176,7 @@ export default function App() {
 
         <Section id="experience" label="Experience">
           {experience.map((e) => (
-            <div key={e.company}>
+            <div key={e.company} className="mb-12 last:mb-0">
               <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                 <h3 className="text-lg font-semibold tracking-tight">
                   {e.role} · <span className="text-accent">{e.company}</span>
