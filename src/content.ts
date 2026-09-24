@@ -52,7 +52,7 @@ export const projects: Project[] = [
   {
     name: 'AI Customer Support Agent',
     tagline: 'The model decides what to do. The backend decides whether it is allowed.',
-    repo: 'https://github.com/MidNight91119/support-agent',
+    repo: 'https://github.com/MidNight91119/ai-support-agent',
     flow: ['ticket', 'agent loop', '⇄ LLM', 'tools', 'store · one lock'],
     points: [
       'An AI agent works each support ticket by calling backend tools (order lookup, policy search, stock check), then resolves it, asks for details, waits for approval, or hands it to a human.',
