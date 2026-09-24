@@ -17,7 +17,7 @@ export const profile = {
 }
 
 export const about = [
-  "At Radisys I worked on Deutsche Telekom's Access 4.0 fibre broadband platform, where I built the service that turns racks of blank servers into running Kubernetes clusters, for a rollout of about 900 sites across Germany.",
+  "At Radisys I worked on Deutsche Telekom's Access 4.0 fibre broadband platform, where I built the Go service that replaced a legacy Python controller and turns racks of blank servers into running Kubernetes clusters, for a rollout of about 900 sites across Germany.",
   'Now I build backends where correctness is the hard part: an AI support agent whose backend, not the model, enforces the rules, and a perpetual-futures exchange with a real matching engine.',
 ]
 
@@ -29,7 +29,7 @@ export const experience = [
     place: 'Bengaluru',
     context: 'Deutsche Telekom Access 4.0, cloud-native FTTH broadband platform',
     points: [
-      "Built the Pod Bring-up Service (PBS), a stateless Go/Gin microservice that provisions bare-metal servers into Rancher-managed K3s clusters for Deutsche Telekom's ~900-site rollout: DNS/DHCP setup, IPMI PXE boot, SUSE OS install via Cobbler/AutoYaST, K3s install via Salt, Rancher registration.",
+      "Built the Pod Bring-up Service (PBS), a stateless Go/Gin microservice that replaced a legacy Python controller and provisions bare-metal servers into Rancher-managed K3s clusters for Deutsche Telekom's ~900-site rollout: DNS/DHCP setup, IPMI PXE boot, SUSE OS install via Cobbler/AutoYaST, K3s install via Salt, Rancher registration.",
       'Made every bring-up step safe to retry: workflow state lives in MongoDB and each step deletes before it creates, so a crashed or re-triggered install resumes without duplicates; installing nodes report progress back through callbacks.',
       'Built the site decommissioning flow, tearing a site down in dependency order: Rancher cluster, SUSE Manager systems and Salt keys, install profiles, DNS/DHCP, BMC power-off.',
       'Built stub services that mimic the vendor APIs, so the whole control plane runs in GitLab CI without hardware; documented every PBS workflow in sequence diagrams.',
