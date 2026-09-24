@@ -33,7 +33,7 @@ export const experience = [
       'Extended the notification proxy mock (Go/Gin) with node-level notification endpoints, so per-server bring-up progress could be verified in CI without the live notification system.',
       "Resolved 19+ bugs across pod bring-up, installation/deployment and graceful shutdown in a distributed microservice platform; reviewed code and wrote the team's docs for those flows.",
       'Traced the provisioning code end to end into 6 sequence diagrams (server install, DNS/DHCP, OS profiles, K8s install status, kubeconfig), used by the team as the reference for the flow.',
-      'Deployed and ran Terraform-provisioned virtual PODs, so squads without physical hardware could test end to end.',
+      'Helped deploy and maintain Terraform-provisioned virtual PODs, so squads without physical hardware could test end to end.',
     ],
     stack: ['Go', 'Gin', 'MongoDB', 'Kubernetes (K3s)', 'Rancher', 'Helm', 'SUSE Manager', 'IPMI', 'GitLab CI', 'Terraform', 'Linux'],
   },
