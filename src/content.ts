@@ -6,7 +6,7 @@ export const profile = {
   role: 'Backend Engineer (Go)',
   pitch:
     'I build Go backends that stay correct when things go wrong: under concurrent requests, when the AI model is wrong, when a server fails halfway through setup.',
-  location: 'Bengaluru, India · open to remote',
+  location: 'Nagpur, India · open to remote or relocation',
   email: 'ayushbhagwat921@gmail.com',
   resume: '/ayush_resume.pdf',
   links: [
@@ -17,7 +17,7 @@ export const profile = {
 }
 
 export const about = [
-  "At Radisys I worked on Deutsche Telekom's Access 4.0 fibre broadband platform, where I built the Go service that replaced a legacy Python controller and turns racks of blank servers into running Kubernetes clusters, for a rollout of about 900 sites across Germany.",
+  "At Radisys I worked on Deutsche Telekom's Access 4.0 fibre broadband platform, on the Go control plane that replaced a legacy Python controller and turns racks of blank servers into running Kubernetes clusters, for a rollout of about 900 sites across Germany.",
   'Now I build backends where correctness is the hard part: an AI support agent whose backend, not the model, enforces the rules, and a perpetual-futures exchange with a real matching engine.',
 ]
 
@@ -27,15 +27,15 @@ export const experience = [
     role: 'Software Engineer, Backend',
     period: 'Jan 2023 – Feb 2024',
     place: 'Bengaluru',
-    context: 'Deutsche Telekom Access 4.0, cloud-native FTTH broadband platform',
+    context: 'Infrastructure and Edge Cloud Compute teams · Deutsche Telekom Access 4.0, cloud-native FTTH broadband platform',
     points: [
-      "Built the Pod Bring-up Service (PBS), a stateless Go/Gin microservice that replaced a legacy Python controller and provisions bare-metal servers into Rancher-managed K3s clusters for Deutsche Telekom's ~900-site rollout: DNS/DHCP setup, IPMI PXE boot, SUSE OS install via Cobbler/AutoYaST, K3s install via Salt, Rancher registration.",
-      'Made every bring-up step safe to retry: workflow state lives in MongoDB and each step deletes before it creates, so a crashed or re-triggered install resumes without duplicates; installing nodes report progress back through callbacks.',
-      'Built the site decommissioning flow, tearing a site down in dependency order: Rancher cluster, SUSE Manager systems and Salt keys, install profiles, DNS/DHCP, BMC power-off.',
-      'Built stub services that mimic the vendor APIs, so the whole control plane runs in GitLab CI without hardware; documented every PBS workflow in sequence diagrams.',
+      "Worked on the Go control plane for Deutsche Telekom's ~900-site FTTH rollout, on the team that built the Pod Bring-up Service (PBS): a stateless Go/Gin microservice that replaced a legacy Python controller and provisions bare-metal servers into Rancher-managed K3s clusters.",
+      'Extended the notification proxy mock (Go/Gin) with node-level notification endpoints, so per-server bring-up progress could be verified in CI without the live notification system.',
+      "Resolved 19+ bugs across pod bring-up, installation/deployment and graceful shutdown in a distributed microservice platform; reviewed code and wrote the team's docs for those flows.",
+      'Traced the provisioning code end to end into 6 sequence diagrams (server install, DNS/DHCP, OS profiles, K8s install status, kubeconfig), used by the team as the reference for the flow.',
       'Deployed and ran Terraform-provisioned virtual PODs, so squads without physical hardware could test end to end.',
     ],
-    stack: ['Go', 'Gin', 'MongoDB', 'Kubernetes (K3s)', 'Rancher', 'Helm', 'SUSE Manager', 'IPMI', 'GitLab CI', 'Terraform'],
+    stack: ['Go', 'Gin', 'MongoDB', 'Kubernetes (K3s)', 'Rancher', 'Helm', 'SUSE Manager', 'IPMI', 'GitLab CI', 'Terraform', 'Linux'],
   },
 ]
 
@@ -89,9 +89,10 @@ export const projects: Project[] = [
 
 export const skills = [
   { group: 'Languages', items: ['Go', 'SQL', 'TypeScript', 'Python'] },
-  { group: 'Backend', items: ['REST', 'gRPC', 'Gin', 'net/http', 'PostgreSQL', 'sqlc', 'MongoDB', 'Redis'] },
+  { group: 'Backend', items: ['Microservices', 'distributed systems', 'concurrency', 'REST', 'gRPC', 'Gin', 'net/http', 'PostgreSQL', 'sqlc', 'MongoDB', 'Redis'] },
   { group: 'AI', items: ['LLM tool calling', 'agent loops', 'OpenAI-compatible APIs'] },
-  { group: 'Infrastructure', items: ['Docker', 'Kubernetes', 'Helm', 'Terraform', 'AWS (EKS, ECR)', 'GitHub Actions', 'GitLab CI'] },
+  { group: 'Infrastructure', items: ['Docker', 'Kubernetes', 'Helm', 'Terraform', 'AWS (EKS, ECR)', 'Linux', 'GitHub Actions', 'GitLab CI'] },
+  { group: 'Testing', items: ['unit + integration tests', 'gomock', 'race detector', 'API contract tests'] },
 ]
 
 export const education = {
